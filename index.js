@@ -32,7 +32,7 @@ const reduceAmountOfPoints = (edgePoints) => {
 };
 
 const changePointsToProcentage = (edgePoints, width, height) => {
-  return edgePoints.map((point) => ({ x: Math.round((point.x / width) * 100), y: Math.round((point.y / height) * 100) }));
+  return edgePoints.map((point) => ({ x: Math.round((point.x / width) * 100) / 100, y: Math.round((point.y / height) * 100) / 100 }));
 };
 
 //***** MAKE EDGE IMAGE PREVIEW */

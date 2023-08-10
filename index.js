@@ -7,33 +7,6 @@ let files = fs.readdirSync(directory).map((file) => {
   return { imageName, extension };
 });
 
-// const findBorderValues = (edgePoints) => {
-//  let minX = edgePoints[0][0];
-//  let maxX = edgePoints[0][0];
-//  let minY = edgePoints[0][1];
-//  let maxY = edgePoints[0][1];
-//  edgePoints.forEach((point) => {
-//   if (point[0] < minX) minX = point[0];
-//   if (point[0] > maxX) maxX = point[0];
-//   if (point[1] < minY) minY = point[1];
-//   if (point[1] > maxY) maxY = point[1];
-//  });
-//  return { minX, maxX, minY, maxY };
-// };
-
-// const getPointsMap = (points) => {
-//  const map = new Map();
-//  points.forEach((point) => {
-//   if (map.has(point[0]))
-//    map.set(
-//     point[0],
-//     [...map.get(point[0]), point[1]].sort((y1, y2) => y1 - y2)
-//    );
-//   else map.set(point[0], [point[1]]);
-//  });
-//  return new Map([...map].sort(([key1, value1], [key2, value2]) => key1 - key2));
-// };
-
 //***** PROCESS EDGE POINTS */
 
 const changePointsToObjects = (edgePoints) => {
@@ -124,10 +97,6 @@ const getEdgePoints = async () => {
     const text = generateText(edgePointsInProcentage, file.imageName);
     file.text = text;
     return file;
-    //   const borderValues = findBorderValues(edgePoints);
-    //   const pointsMap = getPointsMap(edgePoints);
-    //   file.borderValues = borderValues;
-    //   file.edgePoints = edgePoints;
   });
 
   files = await Promise.all(promises);
@@ -146,4 +115,3 @@ const getEdgePoints = async () => {
 };
 
 getEdgePoints();
-// createOutputFiles(directory, imageName, extension);

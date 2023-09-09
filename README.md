@@ -3,14 +3,25 @@
 Javascript app which takes image files as input and outputs coordinates of transparency edge points, together with preview of those edge points. 
 
 ---
+
 ## Table of Contents
 * [General Informations](#general-informations)
+* [Technologies](#technologies)
 * [Usage](#usage)
 * [License](#license)
+
 ---
+
 ## General Informations
 
 Purpose of this app is to find coordinates of transparency edge points in images. It was used to define image collision points in game that i was building in my portfolio website.
+
+---
+
+## Technologies
+
+- [javascript] - programming language that is one of the core technologies of the World Wide Web.
+- [pngjs] - simple PNG encoder/decoder for Node.js with no dependencies.
 
 ---
 
@@ -21,7 +32,7 @@ Purpose of this app is to find coordinates of transparency edge points in images
 git clone https://github.com/rafJagCode/edge_detector.git
 ```
 ### 2. Copy image you want to process inside __images__ folder
-[!image to process](./readme_images/image_to_process.png)
+![image to process](./readme_images/image_to_process.png)
 ### 3. Run:
 ```Bash
 node index.js
@@ -135,8 +146,12 @@ export default imagesCollisionData;
 
 ```
 ### 5. In __edge_previevs__ folder you can see image with marked edge points
-[!edge preview](./readme_images/edge_preview.png)
+![edge preview](./readme_images/edge_preview.png)
 
 ---
 
 MIT
+
+
+[javascript]: <https://developer.mozilla.org/en-US/docs/Web/JavaScript?retiredLocale=pl>
+[pngjs]: <https://www.npmjs.com/package/pngjs>

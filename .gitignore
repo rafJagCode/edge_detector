@@ -1,1 +1,8 @@
 node_modules
+edge_previews/*
+images/*
+output_js/*
+
+!edge_previews/.gitkeep
+!images/.gitkeep
+!output_js/.gitkeep

@@ -2,42 +2,53 @@
 
 Javascript app which takes image files as input and outputs coordinates of transparency edge points, together with preview of those edge points. 
 
----
-
 ## Table of Contents
-* [General Informations](#general-informations)
-* [Technologies](#technologies)
-* [Usage](#usage)
-* [License](#license)
 
----
+[⚓General Informations](#general-informations)
+
+[⚓Technologies](#technologies)
+
+[⚓Usage](#usage)
+
+[⚓License](#license)
 
 ## General Informations
 
-Purpose of this app is to find coordinates of transparency edge points in images. It was used to define image collision points in game that i was building in my portfolio website.
-
----
+Purpose of this app is to find coordinates of transparency edge points in images. It was used to define image collision points in game that i was building for my portfolio website.
 
 ## Technologies
 
-- [javascript] - programming language that is one of the core technologies of the World Wide Web.
-- [pngjs] - simple PNG encoder/decoder for Node.js with no dependencies.
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> <img src="https://raw.githubusercontent.com/rafJagCode/tech_icons/3bfe6c4e7b60c65b2305dbc639fce9ffa4b65698/javascript.svg" width="30" height="30" style="vertical-align:middle"/> Javascript</a> - programming language that is one of the core technologies of the World Wide Web.
 
----
+<a href="https://www.npmjs.com/package/pngjs"> <img src="https://github.com/rafJagCode/tech_icons/blob/main/no-logo.png?raw=true" width="30" height="30" style="vertical-align:middle"/> Pngjs</a> - simple PNG encoder/decoder for Node.js with no dependencies.
 
 ## Usage
 
-### 1. Clone this repository with this command:
-```Bash 
+- Clone repository:
+   
+```sh 
 git clone https://github.com/rafJagCode/edge_detector.git
 ```
-### 2. Copy image you want to process inside __images__ folder
+
+- Install dependencies:
+
+```sh
+cd edge_detector
+npm install
+```
+
+- Copy image you want to process inside __images__ folder
+
 ![image to process](./readme_images/image_to_process.png)
-### 3. Run:
-```Bash
+
+- Run script using nodejs:
+
+```sh
 node index.js
 ```
-### 4. In __output_js__ folder you will have a js file with edge points coordinates
+
+- In __output_js__ folder you will have a js file with edge points coordinates
+
 ```js
 // x and y are collision points coordinates in % of width and height of image
 
@@ -145,10 +156,10 @@ const imagesCollisionData = {
 export default imagesCollisionData;
 
 ```
-### 5. In __edge_previevs__ folder you can see image with marked edge points
-![edge preview](./readme_images/edge_preview.png)
 
----
+- In __edge_previevs__ folder you can see image with marked edge points
+
+![edge preview](./readme_images/edge_preview.png)
 
 ## License
 
